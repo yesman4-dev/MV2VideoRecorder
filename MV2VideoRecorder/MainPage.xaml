@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             x:Class="MV2VideoRecorder.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Grabadora de Video" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <video:VideoPlayer 
+            x:Name="videoPlayer" 
+            BackgroundColor="White"
+            HorizontalOptions="Center"
+            HeightRequest="300" 
+            />
+        
+        <Entry Placeholder="Ingrese una descripción" Margin="30,10,30,0" x:Name="txtdescripcion"/>
+        <Grid Margin="20,0,20,0">
+            <Button Text="Grabar Video" Grid.Column="0" x:Name="btnGrabar" Clicked="btnGrabar_Clicked"/>
+            <Button Text="Guardar" Grid.Column="1" x:Name="btnSalvar" Clicked="btnSalvar_Clicked"/>
+            <Button Text="Listar Videos" Grid.Row="1" Grid.ColumnSpan="2" x:Name="btnlistarvideo" Clicked="btnlistarvideo_Clicked"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
